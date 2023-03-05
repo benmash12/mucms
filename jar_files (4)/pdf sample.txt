@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><title>PDF Export of Contacts</title><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><table border="1px" cellspacing="0" cellpadding="3"><tr><th colspan="6">User's Contacts exported at Date</th></tr><tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Type</th><th>Last Modified</th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></body></html>
+
+
+first click of button generates html, then pdf from query and filter and shows download button if result is greater than zero
+
+if possible, set pdf password as users password
+
+if result is zero, show info/error instead

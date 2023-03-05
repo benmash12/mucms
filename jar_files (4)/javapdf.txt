@@ -1,0 +1,16 @@
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
+
+public class SimpleUsage 
+{
+    public static void main(String[] args) throws Exception { 
+        try (OutputStream os = new FileOutputStream("/Users/me/Documents/pdf/out.pdf")) {
+            PdfRendererBuilder builder = new PdfRendererBuilder();
+            builder.useFastMode();
+            builder.withUri("file:///Users/me/Documents/pdf/in.htm");
+            builder.toStream(os);
+            builder.run();
+        }
+    }
+}

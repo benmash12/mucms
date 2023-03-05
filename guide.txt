@@ -1,0 +1,77 @@
+AJP PROJECT BY AJOY CHOWDHURY AND GBIANG BENEDICT MASHINGIL 2022/2023
+
+Name: Multi-User Contact Management System
+Description: A java based web application that allows users to register,
+             login, add and manage contacts, and also export contacts to
+             pdf. Application also has an admin panel from which users
+             can be managed and site statistics can be viewed (Please
+             scroll below to see admin login details which cannot be
+             changed).
+Type Of Application: Responsive Single Page Application
+Technologies Used: JDBC, JSP, J2EE, HTML, CSS, JS AND JQuery, MySQL, 
+                   OpenHTMLToPDF.
+
+                                
+___________________________________________________________________________
+
+
+INSTALLATION STEPS
+
+1.  Export "mucms.zip" and load it into an IDE, preferably Oracle 
+    Netbeans 8.2. Then also load the jar files from the libraries
+    folder into the project. Prefer to use JDK 1.8 and Glassfish 
+    server 4.1.1
+2.  Create a MySQl database (name preferred is "mucms") and import
+    mucms.sql into it. Then also run the mysql server to enable
+    connection when running the apllication.
+3.  Open [project_root]/web/server.jsp and edit the contents of the first
+    JSP declaration tag when necessary. The first one which is the 
+    "project_root" is necessary to enable the export to pdf feature.
+4.  Run the project which will take you to the welcome page where you can
+    register, login, or view info. Please take note of the constraints
+    displayed when registering or logging in. Also note that you can log in
+    as user or as admin from the same window, password is case sensitive and
+    username might be case sensitive.
+5   You can explore the application as you wish afterwards.
+
+
+____________________________________________________________________________
+
+
+ADMIN LOGIN DETAILS
+username: admin
+password: Admin123#
+
+TEST USER LOGIN DETAILS
+username: Test_user1
+password: Test123#
+
+
+_____________________________________________________________________________
+
+
+Group Member 1: Ajoy Chowdhury
+                92000104003
+                TD1
+
+Group Member 2: Gbiang Benedict Mashingil
+                92000104015
+                TD1
+
+Instructor: Prof. Jatin R. Ambasana
+
+
+_______________________________________________________________________________
+
+
+PROJECT LIMITATIONS
+
+1.  When exporting to pdf, it might be noticed that previously exported pdf files
+    are still saved in the pdf directory even when they are not needed anymore, 
+    this results into unnecesary use of space. This challenge will be handled 
+    on a production server through the use of routine cron jobs to periodically
+    delete previously exported pdf files after one hour.
+2.  During development, redeploying project without first shutting down the 
+    glassfish server corrupts the session variables which the SPA (Single Page
+    Application) depends on to load its content. Please always shutdown 
+    glassfish/tomcat server before rebuilding and redeploying the project.
